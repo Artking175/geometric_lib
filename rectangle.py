@@ -1,6 +1,8 @@
+import unittest
+
 def area(a, b):
     '''
-    возвращает площаь прямоугольника
+    возвращает площадь прямоугольника
 
     умножает сторону (a) на сторону (b)
 
@@ -26,3 +28,12 @@ def perimeter(a, b):
     возвращаемое значение: 10
     '''
     return (a + b)*2
+
+class RectangleTest(unittest.TestCase):
+    def test_zero_area(self):
+        res = area(10, 0)
+        self.assertEqual(res, 0)
+
+    def test_default_per(self):
+        res = perimeter(10, 10)
+        self.assertEqual(res, 40)

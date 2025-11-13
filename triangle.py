@@ -1,3 +1,5 @@
+import unittest
+
 def area(a, h):
     '''
     возвращает площадь треугольника
@@ -25,3 +27,11 @@ def perimeter(a, b, c):
     возвращаемое значение: 9
     '''
     return a+b+c
+
+class TriangleTest(unittest.TestCase):
+    def  test_default_area(self):
+        res = area(4, 6)
+        self.assertEqual(res, 12)
+    def test_default_per(self):
+        res = perimeter(4, 3, 2)
+        self.assertEqual(res, 9)
