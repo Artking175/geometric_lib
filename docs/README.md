@@ -59,3 +59,4 @@
 History:
 e851933 - Add file rectangle
 0426b9d - Fix bag perimeter
+74f9d83 - Add tests
